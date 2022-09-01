@@ -8,24 +8,24 @@ We use gradient boost regression and logistic regression based machine learning 
 ## Technical Overview
 This repository contains the code files of this project.
 
-Data Used- 
+**Data Used**-
 The dataset used in this project is from a publicly available source. This dataset is available to encourage advanced research in the field of cloud performance optimization. This data repository includes large-scale performance data of Hadoop and Spark applications on AWS EC2. Since performance varies with different inputs, the data includes multiple combinations of applications and inputs. Workload is used to describe an application and its input. The workloads are extracted from HiBench and spark-perf. These workloads are run on numerous cloud configuration on Amazon EC2. Each configuration is composed of a virtual machine (VM) type and a number of the same VMs. This data repository includes both the single-node setting and the multi-node setting. The single-node setting includes 18 VM types and the multi-node setting includes 69 configurations (9 VM types and various numbers of VMs). For this project, we use the multi-node setting.
 Use the link- https://github.com/oxhead/scout to access this dataset.
 
-AWS EC2 VM Types-
+**AWS EC2 VM Types**-
 {4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48} x {c4.large, m4.large, r4.large}
 {4, 6, 8, 10, 12, 16, 20, 24} x {c4.xlarge, m4.xlarge, r4.xlarge}
 {4, 6, 8, 10, 12} x {c4.2xlarge, m4.2xlarge, r4.2xlarge}
 
 Data Preprocessing and analysis was performed.
 
-ML Modelling- 
+**ML Modelling**- 
 Gradient Boost regression used to estimate the runtime for the VM instances.
 Logistic regression used to make resource predictions given a specific number of nodes.
 
 Import the footprint Dataset from here- https://docs.google.com/spreadsheets/d/1DqYgQnEDLQVQm5acMAhLgHLD8xXCG9BIrk-_Nv6jF3k/edit#gid=504755275
 
-Carbon Footprint Calculation- 
+**Carbon Footprint Calculation**- 
 Using the runtime and resource estimates, power is calculated. Then using the carbon intensity and power usage effectiveness, carbon footprint is calculated. 
 	
 ## Setup
